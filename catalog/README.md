@@ -2,7 +2,7 @@
 
 This is the first buildable piece of the Mogranco App: a local product catalog that is independent of Square.
 
-The goal is not to solve every inventory problem yet. The goal is to create a clean product source of truth that can be manually seeded with 20–50 real Modern Grace & Co products, searched, exported, and later connected to the mobile-first web app.
+The goal is not to solve every inventory problem yet. The goal is to create a clean product source of truth that can be manually seeded with 50–70 real Modern Grace & Co products, searched, exported, and later connected to the mobile-first web app.
 
 ## What this includes
 
