@@ -1,6 +1,11 @@
 catalog/data/catalog.sqlite
 *.sqlite
 *.sqlite3
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
 $1
 node_modules/
 app/dist/
