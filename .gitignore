@@ -2,3 +2,9 @@ catalog/data/catalog.sqlite
 *.sqlite
 *.sqlite3
 $1
+node_modules/
+app/dist/
+*.tsbuildinfo
+*.log
+app/public/data/products.json
+app/public/product-images/
