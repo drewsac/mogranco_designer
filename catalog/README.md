@@ -27,6 +27,16 @@ mogranco_catalog/
     next_steps.md             # recommended next build steps
 ```
 
+## launch the catalog locally
+
+cd /c/Users/arkin/src/mogranco_designer/app
+npm install
+npm run dev
+
+open the resulting link in a browser
+
+
+
 ## First run
 
 From inside this folder:

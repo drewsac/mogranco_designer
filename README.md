@@ -107,7 +107,7 @@ Do not commit real keys. Browser code should only use:
 
 ```text
 VITE_SUPABASE_URL
-VITE_SUPABASE_ANON_KEY
+VITE_SUPABASE_PUBLISHABLE_KEY
 ```
 
 Trusted import scripts may use:
@@ -168,3 +168,37 @@ SUPABASE_SERVICE_ROLE_KEY
 
 The service-role key bypasses Row Level Security for importing. Keep it only in
 local/server-side environments and never put it in browser code.
+
+## Browser Supabase Read Path
+
+The Vite app can now read from Supabase when browser-safe env values are present:
+
+```text
+VITE_SUPABASE_URL
+VITE_SUPABASE_PUBLISHABLE_KEY
+```
+
+This project is not using Next.js, so it does not need `@supabase/ssr`,
+`NEXT_PUBLIC_` variables, server helpers, or middleware. If Supabase is not
+configured yet, or if the catalog tables are still empty, the app falls back to
+the generated static JSON file.
+# Room Redesign POC
+
+The mobile-friendly redesign flow is the app home page. It accepts JPG, PNG, and
+WEBP room photos, optional design direction, and sends the image through a
+server-side image-editing provider. The existing product browser remains
+available at `/catalog`.
+
+```powershell
+cd app
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`.
+
+For real generation, copy `.env.example` to `.env.local` at the repository root
+and set `OPENAI_API_KEY`. Without that variable, the app runs in clearly labeled
+mock mode and returns the uploaded room image so the full request pipeline can
+be verified. The key is only read by the local server and is never exposed to
+browser code.
