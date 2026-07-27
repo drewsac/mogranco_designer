@@ -6,9 +6,9 @@ import {
   loadProductReferences,
 } from "./catalogService.mjs";
 
-const oneSku = ["mg-alba-016-rc"];
+const oneSku = ["mg-p520-016-rc"];
 const tenSkus = [
-  "mg-alba-016-rc",
+  "mg-p520-016-rc",
   "mg-av-1247",
   "mg-av-1348ardp",
   "mg-av-1633rdp",
@@ -24,6 +24,9 @@ test("resolves one stable product identifier from the catalog fallback", async (
   const products = await findSelectedProducts(oneSku, {});
   assert.equal(products.length, 1);
   assert.equal(products[0].sku, oneSku[0]);
+  assert.equal(products[0].widthIn, 32);
+  assert.equal(products[0].depthIn, 40);
+  assert.equal(products[0].heightIn, 34);
 });
 
 test("resolves ten ordered stable product identifiers", async () => {
