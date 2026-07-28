@@ -1,13 +1,13 @@
 name,description,sku,vendor_name,vendor_sku,brand,category,price,cost,width_in,depth_in,height_in,diameter_in,color,material,finish,room_tags,style_tags,product_tags,general_tags,image_url,active,notes
 abbie swivel chair,abbie swivel chair blue stripes,mg-p520-016-rc,rowe furniture,P520-016-RC,rowe,furniture,2500,1250,32,40,34,,white/blue,,,living>bedroom
-alba swivel chair,alba swivel chair jungle fabric,mg-alba-016-rc,rowe furniture,ALBA-016-RC,rowe,furniture,2500,1250,28,32,35,,jungle,,,living>bedroom,
+alba swivel chair,alba swivel chair jungle fabric,mg-alba-016-rc,rowe furniture,ALBA-016-RC,rowe,furniture,2500,1250,28,32,35,,jungle,,,living>bedroom,,,,,no
 brette sofa,brette sofa white,mg-brette-003-rc,rowe furniture,BRETTE-003-RC,rowe,furniture,6000,3000,92,36,34,,ecru/mocha,,,living
 brooke ottoman,brooke ottoman white,mg-brooke-otto-rc,rowe furniture,BROOKE-OTTO-RC,rowe,furniture,1800,900,26,22,20,,white/carob,,,living>bedroom
 bruges sofa green,bruges sofa green,mg-bruges-002-rc,rowe furniture,BRUGES-002-RC,rowe,furniture,5800,2900,87,40,34,,green/mocha,,,living
-bruges sofa white,bruges sofa white,mg-bruges-003-rc,rowe furniture,BRUGES-003-RC,rowe,furniture,6000,3000,97,40,34,,white/carob,,,living
+bruges sofa white,bruges sofa white,mg-bruges-003-rc,rowe furniture,BRUGES-003-RC,rowe,furniture,6000,3000,97,40,34,,white/carob,,,living,,,,,no
 bruges sofa brown,bruges sofa brown,mg-bruges-022-rc,rowe furniture,BRUGES-022-RC,rowe,furniture,5800,2900,87,40,34,,brown/mocha,,,living,,,,,no
-capri round cocktail table,capri round cocktail table,mg-rr-10660-310,rowe furniture,RR-10660-310,rowe,furniture,3000,1500,40,40,16,,mocha,,,living>bedroom,,,,,no
-capri round end table,capri round end table,mg-rr-10660-335,rowe furniture,RR-10660-335,rowe,furniture,2800,1400,24,24,22,,mocha,,,living>bedroom,,,,,no
+capri round cocktail table,capri round cocktail table,mg-rr-10660-310,rowe furniture,RR-10660-310,rowe,furniture,3000,1500,40,40,16,,mocha,,,living>bedroom,,,,,
+capri round end table,capri round end table,mg-rr-10660-335,rowe furniture,RR-10660-335,rowe,furniture,2800,1400,24,24,22,,mocha,,,living>bedroom,,,,,
 cassius bench,cassius bench,mg-q175-076-rc,rowe furniture,Q175-076-RC,rowe,furniture,5200,2600,61,20,22,,blue/orange/carob,,,living>bedroom>dining,,,,,no
 bernie leather swivel chair,bernie leather swivel chair,mg-q115-l-016-rc,rowe furniture,Q115-L-016-RC,rowe,furniture,6200,3100,33,35,29,,pea green,,,living>bedroom,,,,,no
 linden table lamp white,linden table lamp white,mg-kw-3032pw-l,visual comfort,KW 3032PW-L,visual comfort,lighting,1399,699,23,23,34.5,,plaster white,,,living>bedroom

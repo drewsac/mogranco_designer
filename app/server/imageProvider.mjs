@@ -2,14 +2,29 @@ const DESIGN_PROMPT = `Redesign this photographed room in the Modern Grace & Co.
 
 const PRESERVATION_PROMPT = `Preserve the original room's architecture, spatial layout, proportions, and exact camera viewpoint as closely as possible. Do not add, remove, relocate, resize, or reshape doors, windows, walls, fireplaces, built-ins, ceiling features, stairs, or other major architectural elements. Keep the room recognizably the same physical space.`;
 
-function buildPrompt(instructions, products) {
+function dimension(value, label) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed > 0 ? `${parsed} in ${label}` : null;
+}
+
+function productDimensions(product) {
+  const measurements = [
+    dimension(product.widthIn, "W"),
+    dimension(product.depthIn, "D"),
+    dimension(product.heightIn, "H"),
+    dimension(product.diameterIn, "diameter"),
+  ].filter(Boolean);
+  return measurements.length > 0 ? ` Real-world dimensions: ${measurements.join(" × ")}.` : "";
+}
+
+export function buildPrompt(instructions, products) {
   const userRequest = instructions.trim()
     ? `The client's requested changes are: ${instructions.trim()}`
     : "The client provided no additional change request; use your best design judgment.";
   const productRoles = products
     .map(
       (product, index) =>
-        `Image ${index + 2} is the exact Mogranco product "${product.name}" (SKU: ${product.sku || "not assigned"}).`,
+        `Image ${index + 2} is the exact Mogranco product "${product.name}" (SKU: ${product.sku || "not assigned"}).${productDimensions(product)}`,
     )
     .join("\n");
   return `${DESIGN_PROMPT}
@@ -17,7 +32,7 @@ function buildPrompt(instructions, products) {
 Image 1 is the room to redesign. It must determine the architecture, viewpoint, scale, floor plan, and overall scene.
 ${productRoles}
 
-Treat Images 2 onward as an approved set of exact Mogranco products available for this room. Select and visibly incorporate the products that genuinely suit the room, composition, scale, and design; you do not need to use every referenced product. For every product you do use, preserve its recognizable silhouette, material, finish, color, pattern, and distinguishing design features as closely as possible, and place it at plausible scale and perspective. Do not use the references merely as general style inspiration, and do not invent substitutions for the referenced products.
+Treat Images 2 onward as an approved set of exact Mogranco products available for this room. Select and visibly incorporate the products that genuinely suit the room, composition, scale, and design; you do not need to use every referenced product. For every product you do use, preserve its recognizable silhouette, material, finish, color, pattern, and distinguishing design features as closely as possible. Use the stated real-world dimensions to render each product at physically accurate scale relative to the room, architecture, and other furnishings, with plausible perspective. Do not use the references merely as general style inspiration, and do not invent substitutions for the referenced products.
 
 ${userRequest}
 
